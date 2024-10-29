@@ -4,8 +4,8 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>620</x>
-      <y>30</y>
+      <x>490</x>
+      <y>90</y>
       <w>230</w>
       <h>170</h>
     </coordinates>
@@ -25,10 +25,10 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>620</x>
-      <y>250</y>
+      <x>490</x>
+      <y>310</y>
       <w>210</w>
-      <h>280</h>
+      <h>220</h>
     </coordinates>
     <panel_attributes>Nivel
 --
@@ -41,24 +41,26 @@
 +Nivel (int NumNivel)
 +setup(): void
 +Update() : void
-+Dibujar() : void</panel_attributes>
++Dibujar() : void
++isCompleted() : bool
++RevCondicionVentana() : void</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>240</x>
-      <y>210</y>
+      <x>110</x>
+      <y>270</y>
       <w>300</w>
       <h>240</h>
     </coordinates>
     <panel_attributes>ObjetoJuego
 --
-#float x
-#float y
-#bool active
-#float VelocidadX
-#float VelocidadY
+-float x
+-float y
+-bool active
+-float VelocidadX
+-float VelocidadY
 --
 +ObjetoJuego(float startX, float startY)
 +Update()*
@@ -68,5 +70,16 @@
 +setPosition(float newX, float newY) void
 +isActive() bool</panel_attributes>
     <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>580</x>
+      <y>250</y>
+      <w>30</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;60.0</additional_attributes>
   </element>
 </diagram>
