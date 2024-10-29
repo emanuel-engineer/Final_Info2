@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="15.1">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>620</x>
+      <y>30</y>
+      <w>230</w>
+      <h>170</h>
+    </coordinates>
+    <panel_attributes>Juego
+--
+-Nivel* NivelActual
+-int Puntaje
+-bool GameOver
+--
++Juego()
++IniciarNivel(int NumNivel) : void
++Update() : void
++Dibujar() : void
++isGameOver () : bool</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>620</x>
+      <y>250</y>
+      <w>210</w>
+      <h>280</h>
+    </coordinates>
+    <panel_attributes>Nivel
+--
+-int NivelActual
+-bool Completado
+-Bart* bart
+-Stampy* stampy
+-Homero* homero
+--
++Nivel (int NumNivel)
++setup(): void
++Update() : void
++Dibujar() : void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>240</x>
+      <y>210</y>
+      <w>300</w>
+      <h>240</h>
+    </coordinates>
+    <panel_attributes>ObjetoJuego
+--
+#float x
+#float y
+#bool active
+#float VelocidadX
+#float VelocidadY
+--
++ObjetoJuego(float startX, float startY)
++Update()*
++Dibujar()*
++getX() float
++getY() float
++setPosition(float newX, float newY) void
++isActive() bool</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>
