@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/">
+        <file>sprites/character.png</file>
+        <file>sprites/elefante.png</file>
+    </qresource>
+</RCC>
