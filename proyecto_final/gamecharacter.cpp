@@ -22,6 +22,13 @@ GameCharacter::GameCharacter(QGraphicsItem *parent) :
     jumpTimer->start(16); // 60 FPS aproximadamente
 }
 
+
+/*TO DO::
+-hacer que solo se pueda mover hacia los lados
+-arreglar el salto para que no caiga más de lo necesario
+
+
+*/
 void GameCharacter::keyPressEvent(QKeyEvent *event)
 {
     // Mover el personaje según la tecla presionada
@@ -33,26 +40,21 @@ void GameCharacter::keyPressEvent(QKeyEvent *event)
         setPos(x() + speed, y());
         break;
     case Qt::Key_Up:
-        setPos(x(), y() - speed);
+        //NO SE VA A USAR
+        //setPos(x(), y() - speed);
         break;
     case Qt::Key_Down:
-        setPos(x(), y() + speed);
-        break;
-    }
+        //TODO:: Crear funcion que haga que bart se agache, cambiando el sprite.
+        //setPos(x(), y() + speed);
 
+        break;
     //SALTO
-    switch(event->key()) {
-    case Qt::Key_Left:
-        setPos(x() - speed, y());
-        break;
-    case Qt::Key_Right:
-        setPos(x() + speed, y());
-        break;
     case Qt::Key_Space: // Tecla de salto
         if (!isJumping) {
             isJumping = true;
             verticalVelocity = jumpForce;
             initialY = y();
+
         }
         break;
     }
@@ -62,10 +64,12 @@ void GameCharacter::keyPressEvent(QKeyEvent *event)
 //SALTO UPDATE
 void GameCharacter::updateJump()
 {
+
+
+
     if (isJumping) {
         // Aplicar gravedad
         verticalVelocity += gravity;
-
         // Actualizar posición
         setPos(x(), y() + verticalVelocity);
 
